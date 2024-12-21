@@ -1,7 +1,26 @@
-<!-- @format -->
+<template class>
+  <NavBar />
+  <div id="app">
+    <router-view />
+  </div>
+  <Footer />
+</template>
 
-<script setup></script>
+<script setup>
+  import NavBar from "./components/NavBar.vue";
+  import Footer from "./components/Footer.vue";
+</script>
 
-<template></template>
-
-<style scoped></style>
+<style scoped>
+  #app {
+    position: relative;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
+  .content {
+    transition: all 0.5s;
+  }
+</style>
