@@ -40,7 +40,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory("/"), // Replace with your base URL
+  history: createWebHistory("/"),
   routes,
 });
 
