@@ -1,24 +1,24 @@
 <template>
-  <nav class="bg-primary p-4 sticky top-0 z-10">
+  <nav class="bg-navBg p-4 sticky top-0 z-10 font-mono h-18">
     <ul class="flex space-x-4">
       <li>
-        <router-link to="/" class="text-text hover-effect font-lg"
+        <router-link to="/" class="text-text hover-effect text-2xl"
           >Home</router-link
         >
       </li>
 
       <li>
-        <router-link to="/about" class="text-text hover-effect font-lg"
+        <router-link to="/about" class="text-text hover-effect text-2xl"
           >About</router-link
         >
       </li>
       <li>
-        <router-link to="/projects" class="text-text hover-effect font-lg"
+        <router-link to="/projects" class="text-text hover-effect text-2xl"
           >Projects</router-link
         >
       </li>
       <li>
-        <router-link to="/contact" class="text-text hover-effect font-lg"
+        <router-link to="/contact" class="text-text hover-effect text-2xl"
           >Contact</router-link
         >
       </li>
@@ -43,11 +43,10 @@
     height: 3px;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to right, #4424d6, #a79bd9, #4424d6);
+    background: #98d66c;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-in-out;
-    z-index: -1;
   }
 
   .hover-effect:hover::before {

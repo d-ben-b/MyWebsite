@@ -16,11 +16,16 @@
         >
       </div>
     </div>
+    <component :is="Home" />
   </section>
 </template>
 
 <script setup>
   import { ref } from "vue";
+  import { useRouter } from "vue-router";
+  import Home from "./Home.vue";
+
+  const router = useRouter();
 
   const projects = ref([
     {
@@ -42,6 +47,10 @@
       link: "https://link-to-project-three.com",
     },
   ]);
+
+  const viewPage = (id) => {
+    router.push(`/projects/${id}`);
+  };
 </script>
 
 <style scoped></style>

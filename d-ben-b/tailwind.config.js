@@ -3,12 +3,10 @@ export const content = ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"];
 export const theme = {
   extend: {
     colors: {
-      primary: "#4424D6",
-      text: "#fff",
-      footer: "#110934",
-      footerText: "#8C78E8",
-      content: "#E5E0FA",
-      danger: "#E0245E",
+      navBg: "#1B3409",
+      text: "#C9C926",
+      content: "#F7F7D4",
+      theme: "#66B032",
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
