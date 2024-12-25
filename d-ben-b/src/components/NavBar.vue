@@ -22,6 +22,11 @@
           >Contact</router-link
         >
       </li>
+      <li>
+        <router-link to="/trip" class="text-text hover-effect text-2xl"
+          >Journey</router-link
+        >
+      </li>
     </ul>
   </nav>
 </template>

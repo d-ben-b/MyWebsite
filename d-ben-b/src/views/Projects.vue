@@ -16,7 +16,6 @@
         >
       </div>
     </div>
-    <component :is="Home" />
   </section>
 </template>
 
