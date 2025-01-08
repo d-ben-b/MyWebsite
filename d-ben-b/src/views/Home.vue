@@ -10,7 +10,7 @@
         src="../assets/images/LINE_ALBUM_台東出去玩第三天_241225_1.jpg"
         alt="" />
       <img
-        src="../assets/images/LINE_ALBUM_20221225大二聖誕節🎄_241225_1-1.jpg"
+        src="../assets/images/LINE_ALBUM_20221225大二聖誕節🎄_241225_1.jpg"
         alt="" />
     </div>
     <p class="text-2xl text-gray-600 mb-8">
