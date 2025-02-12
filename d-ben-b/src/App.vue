@@ -1,9 +1,9 @@
 <template>
-  <NavBar />
-  <div id="app" class="content">
+  <div class="content flex flex-col items-center">
+    <NavBar />
     <router-view class="font-mono" />
+    <Footer />
   </div>
-  <Footer />
 </template>
 
 <script setup>
@@ -12,16 +12,12 @@
 </script>
 
 <style scoped>
-  #app {
-    position: relative;
-    top: 68px;
+  .content {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-  }
-  .content {
     transition: all 0.5s;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="about p-5 bg-content rounded-lg shadow-md h-fit">
+  <section class="about p-5 bg-content rounded-lg shadow-md h-fit relative">
     <h1 class="text-4xl font-bold text-gray-800 mb-10">About Myself</h1>
     <div class="flex items-center">
       <img :src="image(0)" alt="my profile" class="w-1/4 mr-4" />
@@ -37,14 +37,14 @@
       <img :src="image(2)" alt="my profile" class="w-1/4 mr-4" />
       <div class="text-left">
         <p class="text-lg text-gray -600">
-          My ultimate goal is to combine my expertise and innovative thinking to
-          work in leading technology companies like Google or NVIDIA,
-          contributing to cutting-edge developments in AI and IoT. Additionally,
-          I aspire to pursue entrepreneurship, leveraging AI to design games
-          that are both educational and entertaining. I am confident that my
-          technical skills, hands-on experiences, and continuous learning
-          mindset will bring value to your team. I look forward to the
-          opportunity to showcase my abilities and passion!
+          My goal is to combine my expertise and innovative thinking to work in
+          leading technology companies like Google or NVIDIA, contributing to
+          cutting-edge developments in AI and IoT. Additionally, I aspire to
+          pursue entrepreneurship, leveraging AI to design games that are both
+          educational and entertaining. I am confident that my technical skills,
+          hands-on experiences, and continuous learning mindset will bring value
+          to your team. I look forward to the opportunity to showcase my
+          abilities and passion!
         </p>
       </div>
     </div>

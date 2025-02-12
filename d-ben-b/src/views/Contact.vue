@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="p-5 bg-content rounded-lg min-h-screen">
+  <section id="contact" class="p-5 bg-content rounded-lg min-h-screen w-full">
     <h2 class="text-3xl font-bold text-gray-800 mb-6">Contact Me</h2>
     <p>
       If you would like to get in touch, feel free to reach out via the

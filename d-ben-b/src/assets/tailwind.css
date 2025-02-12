@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-style {
+  @apply text-2xl text-gray-600 mb-8 absolute right-1 w-1/2;
+}
