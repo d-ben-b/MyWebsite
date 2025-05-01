@@ -1,17 +1,17 @@
 <template>
   <div
-    class="home p-2 bg-content min-h-screen w-full text-align-center relative">
-    <!-- <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to My Website</h1> -->
+    class="relative w-full min-h-screen p-1 home bg-content text-align-center">
+    <!-- <h1 class="mb-4 text-4xl font-bold text-gray-800">Welcome to My Website</h1> -->
     <div class="h-[800px] flex justify-start mx-auto relative top-0 left-0">
       <Transition mode="out-in">
         <img
           :src="image_file"
           :key="image_file"
           alt=""
-          class="h-full left-0 transition duration-700 ease-in-out relative" />
+          class="relative left-0 h-full transition duration-700 ease-in-out" />
       </Transition>
     </div>
-    <svg class="absolute top-0 w-full h-full blur-sm opacity-75">
+    <svg class="absolute top-0 w-full h-full opacity-75 blur-sm">
       <polyline
         points="0,0 1500,450 1500,0 0,0"
         style="fill: whitesmoke; stroke: whitesmoke; stroke-width: 5" />
