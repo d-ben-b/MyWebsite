@@ -32,6 +32,15 @@
           alt="GitHub"
           class="inline-block w-8 h-8 mr-2" />
       </a>
+      <a
+        href="https://www.linkedin.com/in/%E7%B4%B9%E9%8A%98-%E9%98%AE-a85b00290/"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+          alt="LinkedIn"
+          class="inline-block w-8 h-8 mr-2" />
+      </a>
     </div>
   </div>
 </template>
