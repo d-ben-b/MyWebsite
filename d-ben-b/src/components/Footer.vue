@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="bg-navBg py-2 fixed bottom-0 w-full border-t border-gray-300 h-min">
+    class="fixed bottom-0 w-full py-2 border-t border-gray-300 bg-navBg h-min">
     <div class="text-center text-text">
       <p>&copy; 2024 MyWebsite. All rights reserved.</p>
       <p>
