@@ -4,7 +4,7 @@
     <div class="flex items-center">
       <img :src="image(0)" alt="my profile" class="w-1/4 mr-4" />
       <div class="text-left">
-        <p class="text-lg text-gray -600">
+        <p class="text-lg text-gray-600">
           My name is RUAN, SHAO-MING , and I am currently a student at National
           Cheng Kung University(NCKU) majoring in Electrical Engineering. I have
           a strong passion for artificial intelligence, programming, and
@@ -22,7 +22,7 @@
     </div>
     <div class="flex items-center">
       <div class="text-left">
-        <p class="text-lg text-gray -600">
+        <p class="text-lg text-gray-600">
           Beyond academics, I actively engage in cross-disciplinary practices
           and community services, such as promoting STEM education in rural
           schools by teaching programming courses. I have also participated in
@@ -36,7 +36,7 @@
     <div class="flex items-center">
       <img :src="image(2)" alt="my profile" class="w-1/4 mr-4" />
       <div class="text-left">
-        <p class="text-lg text-gray -600">
+        <p class="text-lg text-gray-600">
           My goal is to combine my expertise and innovative thinking to work in
           leading technology companies like Google or NVIDIA, contributing to
           cutting-edge developments in AI and IoT. Additionally, I aspire to
@@ -67,7 +67,7 @@
     </div>
     <h2 class="mt-4 text-xl font-semibold text-gray-700">Hobbies</h2>
     <div class="flex items-center"
-      ><p class="pb-20 mt-2 text-gray-600">
+      ><p class="pb-20 mt-2 text-lg text-gray-600">
         In my free time, I enjoy cycling, playing the violin, and exploring new
         technologies. One of my most memorable achievements was cycling from
         National Cheng Kung University to Guoshenggang Lighthouse—the

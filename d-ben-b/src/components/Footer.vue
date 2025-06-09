@@ -5,19 +5,15 @@
       <p>&copy; 2024 MyWebsite. All rights reserved.</p>
       <p>
         Contact me at:
-        <a href="mailto:your-email@example.com" class="text-blue-500"
-          >your-email@example.com</a
+        <a href="mailto:bend06b@gmail.com" class="text-blue-500"
+          >bend06b@gmail.com</a
         >
       </p>
       <p>
         Follow my social media:
-        <a href="https://twitter.com/yourprofile" class="text-blue-500"
-          >Twitter</a
-        >
+        <a href="https://vocus.cc/salon/d-ben-b" class="text-blue-500">Vocus</a>
         |
-        <a href="https://facebook.com/yourprofile" class="text-blue-500"
-          >Facebook</a
-        >
+        <a href="https://medium.com/@bend06b" class="text-blue-500">medium</a>
       </p>
     </div>
   </footer>

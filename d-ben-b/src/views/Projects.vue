@@ -71,6 +71,7 @@
       id: 2,
       title: "2024年AI台南數位城市治理黑客松",
       img: "src/assets/images/Project/IMG_0959.png",
+      inner_img: "src/assets/images/Project/IMG_5126.png",
       short_description:
         "In 2024, we joined the AI Tainan Digital City Governance Hackathon and built a web platform to replace Excel-based communication in the Health Bureau. I developed the frontend using Vue.js and integrated it with a Flask backend. Our role-based system featured form validation, version control, and task tracking to improve collaboration and prevent data overwrites. We earned the Best Popularity Award and gained hands-on experience in optimizing government workflows with full-stack web technologies.",
       description: `In 2024, we participated in the AI Tainan Digital City Governance Hackathon and developed a platform to help the Health Bureau improve the efficiency of information dissemination. Through interviews with staff and volunteers, we discovered that their original communication workflow heavily relied on Excel files. This often led to errors, accidental data overwrites, and difficulty tracking changes—especially when multiple people edited the same sheet.
@@ -97,9 +98,11 @@
       id: 4,
       title: "裕珍馨員工訓練平台",
       img: "src/assets/images/Project/YJS.png",
+      inner_img: "src/assets/images/Project/YJS2.png",
       short_description:
         "This was the first collaborative project I participated in at NCKU. I was responsible for Modules 2 and 6. Although the project was ultimately not completed due to academic commitments and exam schedules, it was still a valuable learning experience. Throughout the process, I learned how to coordinate frontend-backend integration and effectively communicate with teammates and the project manager to align on design and project direction.",
-      description: "",
+      description:
+        "This was my first experience participating in a real-world backend system development in collaboration with a company (Yu Jan Shin). I was responsible for two key modules—Module 2 and Module 6—within a Flask-based microservice architecture using Blueprints. Although I stepped away from the later stages due to academic responsibilities, I contributed significantly in the early design and implementation phases. I worked with Amazon RDS (MySQL) and dealt with schema planning, foreign key constraint handling, and naming consistency across multiple modules. The experience also introduced me to basic web security practices such as token management, access control, and role-based permissions. Most importantly, I learned how to communicate effectively with enterprise stakeholders, synchronize with other developers through Git, and align backend logic with frontend requirements.",
       link: "",
     },
     {

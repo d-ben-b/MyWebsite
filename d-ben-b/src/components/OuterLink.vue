@@ -23,7 +23,7 @@
 
       <!-- LinkedIn -->
       <a
-        href="https://www.linkedin.com/in/你的 LinkedIn ID"
+        href="https://www.linkedin.com/in/d-ben-b-a85b00290"
         target="_blank"
         rel="noopener noreferrer"
         class="flex items-center h-12 px-2">
