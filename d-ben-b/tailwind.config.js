@@ -5,6 +5,7 @@ export const theme = {
     colors: {
       navBg: "#1B3409",
       text: "#C9C926",
+      white: "#FFFFFF",
       content: "#F7F7D4",
       theme: "#66B032",
     },

@@ -16,8 +16,8 @@
           class="w-6 h-6" />
         <!-- 預設 opacity-0，hover 時才顯示 -->
         <span
-          class="ml-3 transition-opacity duration-300 opacity-0 text-text group-hover:opacity-100 whitespace-nowrap">
-          GitHub
+          class="ml-3 text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100 whitespace-nowrap">
+          <p class="duration-300 hover:text-text">GitHub</p>
         </span>
       </a>
 
@@ -32,8 +32,8 @@
           alt="LinkedIn"
           class="w-6 h-6" />
         <span
-          class="ml-3 transition-opacity duration-300 opacity-0 text-text group-hover:opacity-100 whitespace-nowrap">
-          LinkedIn
+          class="ml-3 text-white transition-opacity duration-300 opacity-0 group-hover:opacity-100 whitespace-nowrap">
+          <p class="duration-300 hover:text-text">LinkedIn</p>
         </span>
       </a>
     </div>

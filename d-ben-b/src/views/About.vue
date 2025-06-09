@@ -75,13 +75,13 @@
         remains my longest and most rewarding ride to date. As for music, I
         often practice the violin. I’ve performed classical pieces such as
         Zigeunerweisen (Sarasate’s Gypsy Airs) and also enjoy playing popular
-        songs like It’s Fortunate to Meet You. I’m particularly drawn to pop
-        music because it allows me to express my emotions more freely and
-        release stress. On weekends, I like to visit a cozy bookstore near NCKU
-        where I can immerse myself in the world of books. Recently, I read The
-        Courage to Be Disliked, a thought-provoking book based on Adlerian
-        psychology. It offered me a fresh perspective and helped me reflect on
-        various aspects of my life and personal relationships.
+        songs like Red Scarf. I’m particularly drawn to pop music because it
+        allows me to express my emotions more freely and release stress. On
+        weekends, I like to visit a cozy bookstore near NCKU where I can immerse
+        myself in the world of books. Recently, I read The Courage to Be
+        Disliked, a thought-provoking book based on Adlerian psychology. It
+        offered me a fresh perspective and helped me reflect on various aspects
+        of my life and personal relationships.
       </p>
       <img :src="image(3)" alt="Volunteer picture" class="w-1/4 mr-4"
     /></div>

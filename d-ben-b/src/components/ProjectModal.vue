@@ -1,6 +1,5 @@
 <template>
   <div
-    @click="closeModal"
     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z--1"
     v-show="isVisible">
     <div
@@ -8,7 +7,7 @@
       <!-- Close Button -->
       <button
         @click="closeModal"
-        class="absolute text-gray-500 transition duration-300 top-4 right-4 hover:text-red-500">
+        class="absolute text-3xl text-gray-500 transition duration-300 top-4 right-4 hover:text-red-500">
         &times;
       </button>
       <!-- Modal Content -->
@@ -34,8 +33,6 @@
 </template>
 
 <script setup>
-  import { ref, watch } from "vue";
-
   const props = defineProps({
     isVisible: Boolean,
     project: Object,
