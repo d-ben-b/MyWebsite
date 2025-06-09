@@ -2,6 +2,7 @@ import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Contact from "@/views/Contact.vue";
 import Projects from "@/views/Projects.vue";
+import Journey from "@/views/Journey.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -39,6 +40,14 @@ const routes = [
     component: Projects,
     meta: {
       routeName: "Projects",
+    },
+  },
+  {
+    path: "/journey",
+    name: "Journey",
+    component: Journey,
+    menta: {
+      routeName: "Journey",
     },
   },
 ];

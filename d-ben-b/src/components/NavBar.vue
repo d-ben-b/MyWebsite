@@ -1,28 +1,28 @@
 <template>
-  <nav class="bg-navBg p-4 top-0 z-10 font-mono h-18 sticky w-full">
+  <nav class="sticky top-0 z-10 w-full p-4 font-mono bg-navBg h-18">
     <ul class="flex space-x-4">
       <li>
-        <router-link to="/" class="text-text hover-effect text-2xl mx-2"
+        <router-link to="/" class="mx-2 text-2xl text-text hover-effect"
           >Home</router-link
         >
       </li>
       <li>
-        <router-link to="/about" class="text-text hover-effect text-2xl mx-2"
+        <router-link to="/about" class="mx-2 text-2xl text-text hover-effect"
           >About</router-link
         >
       </li>
       <li>
-        <router-link to="/projects" class="text-text hover-effect text-2xl mx-2"
+        <router-link to="/projects" class="mx-2 text-2xl text-text hover-effect"
           >Projects</router-link
         >
       </li>
       <li>
-        <router-link to="/contact" class="text-text hover-effect text-2xl mx-2"
+        <router-link to="/contact" class="mx-2 text-2xl text-text hover-effect"
           >Contact</router-link
         >
       </li>
       <li>
-        <router-link to="/trip" class="text-text hover-effect text-2xl mx-2"
+        <router-link to="/journey" class="mx-2 text-2xl text-text hover-effect"
           >Journey</router-link
         >
       </li>
