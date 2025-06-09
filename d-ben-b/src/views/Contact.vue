@@ -13,26 +13,20 @@
       <div class="mb-6 text-center">
         <div class="mb-2">
           Email:
-          <a href="mailto:your-email@example.com" class="text-blue-500"
-            >your-email@example.com</a
-          >
+          <a :href="`mailto:${emailData}`" class="text-blue-500">{{
+            emailData
+          }}</a>
         </div>
         <div class="mb-2">
           LinkedIn:
-          <a
-            href="https://www.linkedin.com/in/your-profile"
-            target="_blank"
-            class="text-blue-500"
-            >Your LinkedIn Profile</a
+          <a :href="`${linkedInData}`" target="_blank" class="text-blue-500"
+            >LinkedIn Profile</a
           >
         </div>
         <div class="mb-2">
           GitHub:
-          <a
-            href="https://github.com/your-username"
-            target="_blank"
-            class="text-blue-500"
-            >Your GitHub Profile</a
+          <a :href="`${githubData}`" target="_blank" class="text-blue-500"
+            >GitHub Profile</a
           >
         </div>
       </div>
@@ -72,9 +66,13 @@
 
 <script setup>
   import { ref } from "vue";
+  import { data } from "../assets/data";
 
   const name = ref("");
   const message = ref("");
+  const emailData = data.email;
+  const githubData = data.github;
+  const linkedInData = data.linkedin;
 
   const sendMessage = () => {
     // Logic to handle sending the message (e.g., API call)

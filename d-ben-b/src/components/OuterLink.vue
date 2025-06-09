@@ -6,7 +6,7 @@
       class="flex flex-col w-12 overflow-hidden transition-all duration-300 rounded-l-lg bg-navBg group-hover:w-40">
       <!-- GitHub -->
       <a
-        href="https://github.com/d-ben-b"
+        :href="`${github}`"
         target="_blank"
         rel="noopener noreferrer"
         class="flex items-center h-12 px-2">
@@ -23,7 +23,7 @@
 
       <!-- LinkedIn -->
       <a
-        href="https://www.linkedin.com/in/d-ben-b-a85b00290"
+        :href="`${linkedin}`"
         target="_blank"
         rel="noopener noreferrer"
         class="flex items-center h-12 px-2">
@@ -39,3 +39,9 @@
     </div>
   </div>
 </template>
+
+<script setup>
+  import { data } from "../assets/data";
+  const linkedin = data.linkedin;
+  const github = data.github;
+</script>

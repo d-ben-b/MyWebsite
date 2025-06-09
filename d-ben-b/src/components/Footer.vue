@@ -5,9 +5,9 @@
       <p>&copy; 2024 MyWebsite. All rights reserved.</p>
       <p>
         Contact me at:
-        <a href="mailto:bend06b@gmail.com" class="text-blue-500"
-          >bend06b@gmail.com</a
-        >
+        <a :href="`mailto:${emailData}`" class="text-blue-500">{{
+          emailData
+        }}</a>
       </p>
       <p>
         Follow my social media:
@@ -19,4 +19,7 @@
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+  import { data } from "../assets/data";
+  const emailData = data.email;
+</script>
