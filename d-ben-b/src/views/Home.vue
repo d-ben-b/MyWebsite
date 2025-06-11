@@ -53,7 +53,7 @@
     <!-- Card Section -->
     <div
       id="card-section"
-      class="scroll-mt-[60vh] relative z-10 grid grid-cols-1 gap-8 px-6 pt-32 pb-20 md:px-16 md:grid-cols-3 bg-cream"
+      class="scroll-mt-[100px] relative z-10 grid grid-cols-1 gap-8 px-6 pt-32 pb-20 md:px-16 md:grid-cols-3 bg-cream"
       data-aos="fade-up"
       data-aos-delay="200"
       data-aos-duration="1000">
@@ -122,7 +122,6 @@
       el.scrollIntoView({
         behavior: "smooth",
         block: "start",
-        inline: "nearest",
       });
     }
   };

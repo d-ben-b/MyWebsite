@@ -5,12 +5,24 @@
       <div
         v-for="project in projects"
         :key="project.id"
-        class="p-6 bg-white rounded-lg shadow-md card"
+        class="relative p-6 overflow-hidden bg-white rounded-lg shadow-md card"
         v-show="project.id != -1">
+        <!-- Badge for Coming Soon -->
+        <!-- <div
+            v-if="project.title === 'Coming Soon'"
+            class="absolute top-4 right-4">
+            <span
+              class="px-2 py-1 text-xs font-semibold text-white bg-yellow-500 rounded-full animate-pulse">
+              📅 Coming Soon
+            </span>
+          </div> -->
+
         <h2 class="text-xl font-semibold text-gray-800">{{ project.title }}</h2>
         <img :src="project.img" alt="" class="w-auto p-6" />
         <p class="mt-2 text-gray-600">{{ project.short_description }}</p>
+
         <button
+          v-if="project.link || project.description"
           @click="
             selectedProject = project;
             showModal = true;
@@ -20,13 +32,14 @@
         </button>
       </div>
     </div>
+
     <transition
       name="modal"
-      enter-active-class="transition-opacity duration-500 ease-out "
-      enter-from-class="opacity-0 "
-      enter-to-class="opacity-100 "
-      leave-active-class="transition-opacity duration-500 ease-in "
-      leave-from-class="opacity-100 "
+      enter-active-class="transition-opacity duration-500 ease-out"
+      enter-from-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-active-class="transition-opacity duration-500 ease-in"
+      leave-from-class="opacity-100"
       leave-to-class="opacity-0">
       <ProjectModal
         v-if="showModal"
@@ -42,15 +55,7 @@
   import ProjectModal from "../components/ProjectModal.vue";
 
   const showModal = ref(false);
-  const selectedProject = ref([
-    {
-      id: 1,
-      title: "元太eNote電子紙專案",
-      img: "src/assets/images/Project/_MG_4683.jpg",
-      description: "",
-      link: "https://link-to-project-one.com",
-    },
-  ]);
+  const selectedProject = ref({});
 
   const projects = ref([
     {
@@ -59,9 +64,9 @@
       img: "src/assets/images/Project/coming_soon.png",
       inner_img: "src/assets/images/Project/coming_soon.png",
       description:
-        "A fresh project is on the horizon, promising creativity, sustainability, and groundbreaking tech insights. Check back soon for updates!",
+        "An exciting new chapter is in the works — a story of growth, learning, and real-world impact. Stay tuned for the next milestone in my journey.",
       short_description:
-        "A fresh project is on the horizon, promising creativity, sustainability, and groundbreaking tech insights. Check back soon for updates!",
+        "An exciting new chapter is in the works — a story of growth, learning, and real-world impact. Stay tuned for the next milestone in my journey.",
       link: "",
     },
   ]);
