@@ -12,7 +12,7 @@
 <script setup>
   import NavBar from "./components/NavBar.vue";
   import Footer from "./components/Footer.vue";
-  import outerLink from "./components/outerLink.vue";
+  import outerLink from "./components/OuterLink.vue";
 </script>
 
 <style scoped>
