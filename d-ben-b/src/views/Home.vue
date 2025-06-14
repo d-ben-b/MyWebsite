@@ -103,7 +103,7 @@
     };
   });
   setInterval(() => {
-    imageIndex.value = (imageIndex.value + 1) % image_files.value.length;
+    imageIndex.value = (imageIndex.value + 1) % image_files.length;
   }, 5000);
 
   const handleScroll = () => {
