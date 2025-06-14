@@ -21,7 +21,7 @@
   const props = defineProps({
     title: String,
     subtitle: String,
-    image: String,
+    image: URL,
     link: String,
   });
   const router = useRouter();

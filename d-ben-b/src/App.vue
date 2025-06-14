@@ -2,9 +2,11 @@
   <div class="flex flex-col items-center content bg-content">
     <NavBar />
     <outerLink />
-    <Transition name="fade" mode="out-in">
-      <router-view :key="$route.fullPath" class="font-mono" />
-    </Transition>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" :key="$route.fullPath" class="font-mono" />
+      </transition>
+    </router-view>
     <Footer />
   </div>
 </template>
