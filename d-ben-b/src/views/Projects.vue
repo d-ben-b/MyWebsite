@@ -46,7 +46,7 @@
     {
       id: 1,
       title: "元太eNote電子紙專案",
-      img: "src/assets/images/Project/_MG_4683.jpg",
+      img: "Project/_MG_4683.jpg",
       description: "",
       link: "https://link-to-project-one.com",
     },
@@ -56,8 +56,8 @@
     {
       id: 1,
       title: "元太eNote電子紙專案",
-      img: "src/assets/images/Project/_MG_4683.jpg",
-      inner_img: "src/assets/images/Project/_MG_4994.jpg",
+      img: "Project/_MG_4683.jpg",
+      inner_img: "Project/_MG_4994.jpg",
       short_description:
         "I believe electronic paper, as a form of green technology, holds the potential to enhance information access while reducing resource waste. Through the interdisciplinary opportunities provided by NCKU, I have been able to apply my technical skills to sustainable innovation. This experience has strengthened my commitment to the SDGs and inspired me to contribute actively through design and development. Looking forward, I hope to continue improving technologies like e-paper and use my expertise to address both environmental and societal needs.",
       description: `This project marked my first step into web development. Built solely with HTML, CSS, and JavaScript, it may not be the most advanced among my works, but it played a significant role in paving the way for my growth and success.
@@ -68,8 +68,8 @@
     {
       id: 2,
       title: "2024年AI台南數位城市治理黑客松",
-      img: "src/assets/images/Project/IMG_0959.png",
-      inner_img: "src/assets/images/Project/IMG_5126.png",
+      img: "Project/IMG_0959.png",
+      inner_img: "Project/IMG_5126.png",
       short_description:
         "In 2024, we joined the AI Tainan Digital City Governance Hackathon and built a web platform to replace Excel-based communication in the Health Bureau. I developed the frontend using Vue.js and integrated it with a Flask backend. Our role-based system featured form validation, version control, and task tracking to improve collaboration and prevent data overwrites. We earned the Best Popularity Award and gained hands-on experience in optimizing government workflows with full-stack web technologies.",
       description: `In 2024, we participated in the AI Tainan Digital City Governance Hackathon and developed a platform to help the Health Bureau improve the efficiency of information dissemination. Through interviews with staff and volunteers, we discovered that their original communication workflow heavily relied on Excel files. This often led to errors, accidental data overwrites, and difficulty tracking changes—especially when multiple people edited the same sheet.
@@ -80,9 +80,8 @@
     {
       id: 3,
       title: "Sparkful Hack to the Top AI 金融創新黑客松",
-      img: "src/assets/images/Project/LINE_ALBUM_SPARKFUL AI金融黑客松_250430_1.jpg",
-      inner_img:
-        "src/assets/images/Project/LINE_ALBUM_SPARKFUL AI金融黑客松_250430_2.jpg",
+      img: "Project/LINE_ALBUM_SPARKFUL AI金融黑客松_250430_1.jpg",
+      inner_img: "Project/LINE_ALBUM_SPARKFUL AI金融黑客松_250430_2.jpg",
       short_description:
         "In 2025, our team was selected as a finalist among 200+ teams in the Sparkful Hackathon. I built the frontend with Vue.js and implemented the backend using Django. We retrained YOLOv11n on the UECFOOD256 dataset for food recognition, integrating AI, health scoring, and financial incentives into a full-stack web platform.",
       description: `In 2025, our team was selected as a finalist from over 200 teams to compete in the Sparkful Hackathon. Although we did not place in the final rankings, the experience was immensely rewarding—we gained hands-on experience with new technologies and had the opportunity to connect with other talented participants from diverse backgrounds.
@@ -95,8 +94,8 @@
     {
       id: 4,
       title: "裕珍馨員工訓練平台",
-      img: "src/assets/images/Project/YJS.png",
-      inner_img: "src/assets/images/Project/YJS2.png",
+      img: "Project/YJS.png",
+      inner_img: "Project/YJS2.png",
       short_description:
         "This was the first collaborative project I participated in at NCKU. I was responsible for Modules 2 and 6. Although the project was ultimately not completed due to academic commitments and exam schedules, it was still a valuable learning experience. Throughout the process, I learned how to coordinate frontend-backend integration and effectively communicate with teammates and the project manager to align on design and project direction.",
       description:
@@ -106,8 +105,8 @@
     {
       id: 3,
       title: "Structured Pruning and Fine-tuning on DeiT Models",
-      img: "src/assets/images/Project/deit_prune_summary.png", // Suggested: pruning accuracy chart
-      inner_img: "src/assets/images/Project/deit_pointwise_diff.png", // Suggested: per-model arrow chart
+      img: "Project/deit_prune_summary.png", // Suggested: pruning accuracy chart
+      inner_img: "Project/deit_pointwise_diff.png", // Suggested: per-model arrow chart
       short_description:
         "Conducted structured N:M pruning on DeiT models and compared full and LoRA fine-tuning strategies in terms of accuracy and resource trade-offs.",
       description: `
@@ -126,8 +125,8 @@
     {
       id: 0,
       title: "Coming Soon",
-      img: "src/assets/images/Project/coming_soon.png",
-      inner_img: "src/assets/images/Project/coming_soon.png",
+      img: "Project/coming_soon.png",
+      inner_img: "Project/coming_soon.png",
       description:
         "A fresh project is on the horizon, promising creativity, sustainability, and groundbreaking tech insights. Check back soon for updates!",
       short_description:

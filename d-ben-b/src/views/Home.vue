@@ -6,7 +6,7 @@
       class="absolute inset-0 z-0 will-change-transform"
       :style="{ transform: `translateY(${parallaxOffset.value * 0.5}px)` }">
       <img
-        :src="image_file"
+        :src="image(imageIndex)"
         alt="Hero Background"
         class="object-cover w-full h-full opacity-30" />
       <div
@@ -82,25 +82,28 @@
   import AOS from "aos";
   import "aos/dist/aos.css";
 
-  const ImgArray = ref([
-    "../assets/images/LINE_ALBUM_台東出去玩第三天_241225_1.jpg",
-    "../assets/images/HOME.jpg",
-    "../assets/images/LINE_ALBUM_2024714高雄出來玩_241225_1.jpg",
-    "../assets/images/LINE_ALBUM_20221225大二聖誕節🎄_241225_1.jpg",
-  ]);
+  const image_files = [
+    "LINE_ALBUM_台東出去玩第三天_241225_1.jpg",
+    "HOME.jpg",
+    "LINE_ALBUM_2024714高雄出來玩_241225_1.jpg",
+    "LINE_ALBUM_20221225大二聖誕節🎄_241225_1.jpg",
+  ];
 
   const imageIndex = ref(0);
   const parallaxOffset = ref(0);
 
-  const image = (index) => {
-    if (index < 0 || index >= ImgArray.value.length) return null;
-    return new URL(ImgArray.value[index], import.meta.url);
-  };
-
-  const image_file = computed(() => image(imageIndex.value));
-
+  const image = computed(() => {
+    return (index) => {
+      if (index < 0 || index >= image_files.length) {
+        console.error(`Invalid index: ${index}`);
+        return null;
+      }
+      return new URL(`../assets/images/${image_files[index]}`, import.meta.url)
+        .href;
+    };
+  });
   setInterval(() => {
-    imageIndex.value = (imageIndex.value + 1) % ImgArray.value.length;
+    imageIndex.value = (imageIndex.value + 1) % image_files.value.length;
   }, 5000);
 
   const handleScroll = () => {

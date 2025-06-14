@@ -61,8 +61,8 @@
     {
       id: 3,
       title: "Coming Soon",
-      img: "src/assets/images/Project/coming_soon.png",
-      inner_img: "src/assets/images/Project/coming_soon.png",
+      img: "Project/coming_soon.png",
+      inner_img: "Project/coming_soon.png",
       description:
         "An exciting new chapter is in the works — a story of growth, learning, and real-world impact. Stay tuned for the next milestone in my journey.",
       short_description:
