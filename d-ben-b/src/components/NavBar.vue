@@ -21,16 +21,47 @@
           >Contact</router-link
         >
       </li>
-      <li>
+      <li class="text-left" :class="{ grow: !showSecretPage }">
         <router-link to="/journey" class="mx-2 text-2xl text-text hover-effect"
           >Journey</router-link
         >
+      </li>
+      <li
+        class="text-left"
+        :class="{ grow: showSecretPage }"
+        v-show="showSecretPage">
+        <router-link
+          to="/anniversary"
+          class="mx-2 text-2xl text-text hover-effect"
+          >Anniversary</router-link
+        >
+      </li>
+      <li class="grow-3">
+        <input
+          v-model="secretCode"
+          @keyup.enter="submitCode"
+          type="text"
+          placeholder="  This is a place for some secret code"
+          class="h-8 border-2 border-text w-96 rounded-xl" />
       </li>
     </ul>
   </nav>
 </template>
 
-<script setup></script>
+<script setup>
+  import { ref } from "vue";
+  const secretCode = ref("");
+  const showSecretPage = ref(false);
+
+  const submitCode = () => {
+    if (secretCode.value === "5201314") {
+      console.warn("OK!!");
+      showSecretPage.value = true;
+    } else {
+      console.log("HI");
+    }
+  };
+</script>
 
 <style scoped>
   .hover-effect {

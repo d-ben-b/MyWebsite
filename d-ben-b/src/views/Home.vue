@@ -98,8 +98,7 @@
         console.error(`Invalid index: ${index}`);
         return null;
       }
-      return new URL(`../assets/images/${image_files[index]}`, import.meta.url)
-        .href;
+      return new URL(`../assets/images/${image_files[index]}`, import.meta.url);
     };
   });
   setInterval(() => {
