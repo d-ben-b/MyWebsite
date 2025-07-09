@@ -21,28 +21,30 @@
           >Contact</router-link
         >
       </li>
-      <li class="text-left" :class="{ grow: !showSecretPage }">
+      <li class="text-left" :class="{ grow: !growFlex }">
         <router-link to="/journey" class="mx-2 text-2xl text-text hover-effect"
           >Journey</router-link
         >
       </li>
-      <li
-        class="text-left"
-        :class="{ grow: showSecretPage }"
-        v-show="showSecretPage">
-        <router-link
-          to="/anniversary"
-          class="mx-2 text-2xl text-text hover-effect"
-          >Anniversary</router-link
-        >
-      </li>
-      <li class="grow-3">
+      <transition>
+        <li
+          class="text-left"
+          :class="{ grow: growFlex }"
+          v-show="showSecretPage">
+          <router-link
+            to="/anniversary"
+            class="mx-2 text-2xl text-text hover-effect"
+            >Anniversary</router-link
+          >
+        </li>
+      </transition>
+      <li>
         <input
           v-model="secretCode"
           @keyup.enter="submitCode"
           type="text"
-          placeholder="  This is a place for some secret code"
-          class="h-8 border-2 border-text w-96 rounded-xl" />
+          placeholder="This is a place for some secret code"
+          class="h-8 px-5 border-2 border-text w-96 rounded-xl focus:outline-none" />
       </li>
     </ul>
   </nav>
@@ -52,13 +54,17 @@
   import { ref } from "vue";
   const secretCode = ref("");
   const showSecretPage = ref(false);
+  const growFlex = ref(false);
 
   const submitCode = () => {
-    if (secretCode.value === "5201314") {
-      console.warn("OK!!");
+    if (secretCode.value === "1") {
+      growFlex.value = true;
       showSecretPage.value = true;
     } else {
-      console.log("HI");
+      showSecretPage.value = false;
+      setTimeout(() => {
+        growFlex.value = false;
+      }, 500);
     }
   };
 </script>
@@ -87,5 +93,15 @@
   .hover-effect:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+
+  .v-enter-active,
+  .v-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .v-enter-from,
+  .v-leave-to {
+    opacity: 0;
   }
 </style>
