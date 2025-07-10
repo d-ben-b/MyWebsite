@@ -1,5 +1,5 @@
 <template>
-  <nav class="sticky top-0 z-10 w-full p-4 font-mono bg-navBg h-18">
+  <nav class="sticky top-0 z-10 w-full p-4 font-mono bg-navBg h-18 user-select: none" >
     <ul class="flex space-x-4">
       <li>
         <router-link to="/" class="mx-2 text-2xl text-text hover-effect"
