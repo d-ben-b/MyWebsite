@@ -1,7 +1,7 @@
 <template>
-  <div class="not-finished-container">
+  <div class="min-h-screen not-finished-container">
     <div class="content-box">
-      <h1>{{ title }}</h1>
+      <h1 class="text-rose-900">{{ title }}</h1>
       <div class="divider"></div>
       <div class="construction-icon">
         <i class="fas fa-tools"></i>
@@ -39,7 +39,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
     padding: 2rem;
     text-align: center;
   }
@@ -55,7 +54,6 @@
   h1 {
     font-size: 2.2rem;
     margin-bottom: 0.5rem;
-    color: #333;
   }
 
   h2 {

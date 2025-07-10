@@ -1,6 +1,7 @@
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Contact from "@/views/Contact.vue";
+import NotFinishedYet from "../views/NotFinishedYet.vue";
 import Projects from "@/views/Projects.vue";
 import Journey from "@/views/Journey.vue";
 import Anniversary from "@/views/Anniversary.vue";
@@ -9,7 +10,12 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
   {
     path: "/:catchAll(.*)",
-    redirect: "/",
+    //redirect: "/",
+    name: "Error",
+    component: NotFinishedYet,
+    meta: {
+      routeName: "error",
+    },
   },
   {
     path: "/",
