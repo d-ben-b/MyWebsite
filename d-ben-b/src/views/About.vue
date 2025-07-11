@@ -50,24 +50,17 @@
     </div>
     <h2 class="mt-4 text-xl font-semibold text-gray-700">Skills</h2>
     <div ref="skillsContainer" class="mt-3 skills-container">
-      <div
-        v-for="(skill, index) in skills"
-        :key="skill"
-        class="skill-item"
-        :class="{ visible: skillsVisible }"
+      <div v-for="(skill, index) in skills" :key="skill" class="skill-item" :class="{ visible: skillsVisible }"
         :style="{ animationDelay: `${index * 0.1}s` }">
         <div class="skill-icon">
-          <img
-            :src="getSkillIcon(skill)"
-            :alt="skill + ' icon'"
-            class="w-6 h-6" />
+          <img :src="getSkillIcon(skill)" :alt="skill + ' icon'" class="w-6 h-6" />
         </div>
         <span>{{ skill }}</span>
       </div>
     </div>
     <h2 class="mt-4 text-xl font-semibold text-gray-700">Hobbies</h2>
-    <div class="flex items-center"
-      ><p class="pb-20 mt-2 text-lg text-gray-600">
+    <div class="flex items-center">
+      <p class="pb-20 mt-2 text-lg text-gray-600">
         In my free time, I enjoy cycling, playing the violin, and exploring new
         technologies. One of my most memorable achievements was cycling from
         National Cheng Kung University to Guoshenggang Lighthouse—the
@@ -83,128 +76,129 @@
         offered me a fresh perspective and helped me reflect on various aspects
         of my life and personal relationships.
       </p>
-      <img :src="image(3)" alt="Volunteer picture" class="w-1/4 mr-4"
-    /></div>
+      <img :src="image(3)" alt="Volunteer picture" class="w-1/4 mr-4" />
+    </div>
   </section>
 </template>
 
 <script setup>
-  import { computed, ref, onMounted } from "vue";
+import { computed, ref, onMounted } from "vue";
 
-  const image_files = [
-    "MyProfile.jpg",
-    "Volunteer.jpg",
-    "Goal1.jpg",
-    "Hobby.jpg",
-  ];
-  const image = computed(() => {
-    return (index) => {
-      if (index < 0 || index >= image_files.length) {
-        console.error(`Invalid index: ${index}`);
-        return null;
-      }
-      return new URL(`../assets/images/${image_files[index]}`, import.meta.url)
-        .href;
-    };
-  });
-
-  // Skills data
-  const skills = [
-    "JavaScript",
-    "Vue.js",
-    "HTML & CSS",
-    "Node.js",
-    "Python",
-    "Machine learning",
-  ];
-
-  // Skill icons (you may need to add these icons to your assets folder)
-  const getSkillIcon = (skill) => {
-    const iconMap = {
-      JavaScript: "js.png",
-      "Vue.js": "vue.png",
-      "HTML & CSS": "html.png",
-      "Node.js": "node.png",
-      Python: "python.png",
-      "Machine learning": "ml.png",
-    };
-    const fileName = iconMap[skill] || "default-skill.png";
-    return new URL(`../assets/images/icons/${fileName}`, import.meta.url).href;
-  };
-
-  // Animation for skills
-  const skillsContainer = ref(null);
-  const skillsVisible = ref(false);
-
-  onMounted(() => {
-    // Setup intersection observer for skills animation
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            skillsVisible.value = true;
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    if (skillsContainer.value) {
-      observer.observe(skillsContainer.value);
+const image_files = [
+  "MyProfile.jpg",
+  "Volunteer.jpg",
+  "Goal1.jpg",
+  "Hobby.jpg",
+];
+const image = computed(() => {
+  return (index) => {
+    if (index < 0 || index >= image_files.length) {
+      console.error(`Invalid index: ${index}`);
+      return null;
     }
-  });
+    return new URL(`../assets/images/${image_files[index]}`, import.meta.url)
+      .href;
+  };
+});
+
+// Skills data
+const skills = [
+  "JavaScript",
+  "Vue.js",
+  "HTML & CSS",
+  "Node.js",
+  "Python",
+  "Machine learning",
+];
+
+// Skill icons (you may need to add these icons to your assets folder)
+const getSkillIcon = (skill) => {
+  const iconMap = {
+    JavaScript: "js.png",
+    "Vue.js": "vue.png",
+    "HTML & CSS": "html.png",
+    "Node.js": "node.png",
+    Python: "python.png",
+    "Machine learning": "ml.png",
+  };
+  const fileName = iconMap[skill] || "default-skill.png";
+  return new URL(`../assets/images/icons/${fileName}`, import.meta.url).href;
+};
+
+// Animation for skills
+const skillsContainer = ref(null);
+const skillsVisible = ref(false);
+
+onMounted(() => {
+  // Setup intersection observer for skills animation
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          skillsVisible.value = true;
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  if (skillsContainer.value) {
+    observer.observe(skillsContainer.value);
+  }
+});
 </script>
 
 <style scoped>
-  .skills-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-left: 1.25rem;
-  }
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-left: 1.25rem;
+}
 
-  .skill-item {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem;
-    background-color: rgba(227, 245, 179, 0.8);
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transform: translateY(20px);
+.skill-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: rgba(227, 245, 179, 0.8);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.skill-item.visible {
+  transform: translateY(0);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.skill-icon {
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: rgba(229, 231, 235, 0.5);
+}
+
+.skill-item span {
+  font-weight: 500;
+  color: #4b5563;
+}
+
+@keyframes fadeInUp {
+  from {
     opacity: 0;
-    transition: all 0.4s ease-out;
+    transform: translateY(20px);
   }
 
-  .skill-item.visible {
+  to {
+    opacity: 1;
     transform: translateY(0);
-    animation: fadeInUp 0.5s ease forwards;
   }
-
-  .skill-icon {
-    margin-right: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background-color: rgba(229, 231, 235, 0.5);
-  }
-
-  .skill-item span {
-    font-weight: 500;
-    color: #4b5563;
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+}
 </style>

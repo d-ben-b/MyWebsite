@@ -19,6 +19,6 @@
 </template>
 
 <script setup>
-  import { data } from "../assets/data";
-  const emailData = data.email;
+import { data } from "../assets/data";
+const emailData = data.email;
 </script>
