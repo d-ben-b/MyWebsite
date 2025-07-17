@@ -3,12 +3,6 @@
     class="fixed inset-0 z-50 flex items-center justify-center transition-opacity bg-black bg-opacity-75"
     @click="closeModal">
     <div class="relative max-w-4xl p-6 mx-auto overflow-hidden bg-white rounded-lg shadow-xl" @click.stop>
-      <!-- Clothespin SVG - consistent with PhotoCard -->
-      <svg class="absolute transform -translate-x-1/2 w-14 h-14 -top-6 left-1/2" viewBox="0 0 64 64" fill="none">
-        <rect x="28" y="0" width="8" height="32" rx="2" fill="#6B7280" />
-        <rect x="20" y="4" width="24" height="6" rx="1" fill="#4B5563" transform="rotate(45 20 4)" />
-        <circle cx="32" cy="16" r="2" fill="white" />
-      </svg>
 
       <!-- Close button -->
       <button @click="closeModal" class="absolute text-gray-500 transition-colors top-4 right-4 hover:text-gray-800">
@@ -19,8 +13,19 @@
 
       <!-- Photo content -->
       <div class="flex flex-col items-center mt-4">
-        <img v-if="selectedPhoto" :src="selectedPhoto.image" alt="" class="max-h-[70vh] object-contain" />
+        <img v-if="selectedPhoto" :src="currentImage" alt="" class="max-h-[60vh] object-contain" />
+
+        <!-- Thumbnails section -->
+        <div v-if="hasMultipleImages" class="flex flex-wrap justify-center gap-2 mt-4">
+          <div v-for="(img, idx) in allImages" :key="idx" @click="currentImageIndex = idx"
+            class="w-16 h-16 transition-all border-2 cursor-pointer"
+            :class="currentImageIndex === idx ? 'border-blue-500 opacity-100' : 'border-gray-200 opacity-70 hover:opacity-100'">
+            <img :src="img" alt="" class="object-cover w-full h-full" />
+          </div>
+        </div>
+
         <div class="mt-4 text-xl font-semibold text-center">{{ selectedPhoto?.title }}</div>
+        <div class="mt-4 text-xl text-center">{{ selectedPhoto?.desc }}</div>
         <div class="mt-2 text-gray-600">{{ selectedPhoto?.date }}</div>
       </div>
     </div>
@@ -28,7 +33,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
+import { defineProps, defineEmits, ref, computed } from 'vue';
 
 const props = defineProps({
   isOpen: {
@@ -42,8 +47,59 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['close']);
+const currentImageIndex = ref(0);
 
+// Reset the current image index when photo changes
+const resetImageIndex = () => {
+  currentImageIndex.value = 0;
+};
+
+// Watch for changes in selectedPhoto
 const closeModal = () => {
   emit('close');
+  resetImageIndex();
 };
+
+// Compute if the selected photo has multiple images
+const hasMultipleImages = computed(() => {
+  return props.selectedPhoto &&
+    props.selectedPhoto.image_files &&
+    props.selectedPhoto.image_files.length > 0;
+});
+
+// Create an array of all images (main image + additional images)
+const allImages = computed(() => {
+  if (!props.selectedPhoto) return [];
+
+  const images = [props.selectedPhoto.image];
+
+  if (hasMultipleImages.value) {
+    images.push(...props.selectedPhoto.image_files);
+  }
+
+  return images;
+});
+
+// Get the current image to display
+const currentImage = computed(() => {
+  if (!props.selectedPhoto) return '';
+
+  if (currentImageIndex.value === 0 || !hasMultipleImages.value) {
+    return props.selectedPhoto.image;
+  }
+
+  return allImages.value[currentImageIndex.value];
+});
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
