@@ -13,7 +13,7 @@
 
       <!-- Photo content -->
       <div class="flex flex-col items-center mt-4">
-        <img v-if="selectedPhoto" :src="currentImage" alt="" class="max-h-[60vh] object-contain" />
+        <img v-if="selectedPhoto" :src="currentImage" alt="" class="max-h-[50vh] object-contain" />
 
         <!-- Thumbnails section -->
         <div v-if="hasMultipleImages" class="flex flex-wrap justify-center gap-2 mt-4">
