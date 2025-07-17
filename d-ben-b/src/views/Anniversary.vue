@@ -3,7 +3,7 @@
     class="container relative flex w-full min-h-screen overflow-x-auto select-none active:cursor-grabbing"
     @mousedown="startDrag" @mousemove="onDrag" @mouseleave="stopDrag" @mouseup="stopDrag">
     <!-- Rope SVG（延伸進來用 dashed 線條） -->
-    <PhotoView />
+    <PhotoView :isOpen="isModalOpen" :selectedPhoto="selectedPhoto" @close="closeModal" />
     <svg class="absolute top-[15px] left-0 w-[120%] h-8 z-0" viewBox="0 0 600 50" preserveAspectRatio="none">
       <path d="M0,25 C100,5 200,45 300,25 C400,5 500,45 600,25" stroke="#8B5E3C" stroke-width="6" fill="none"
         stroke-linecap="round" stroke-dasharray="6,6" />
@@ -24,6 +24,15 @@ const scrollContainer = ref(null);
 let isDragging = false;
 let startX = 0;
 let scrollLeft = 0;
+
+const isModalOpen = ref(false);
+const selectedPhotoIndex = ref(null);
+const selectedPhoto = computed(() => {
+  if (selectedPhotoIndex.value !== null) {
+    return photos[selectedPhotoIndex.value];
+  }
+  return null;
+});
 
 const image_files = [];
 const photos = [
@@ -52,12 +61,16 @@ const photos = [
     date: "2025-07-12",
     title: "City Lights",
   },
-
 ];
 
 const openModal = (index) => {
+  selectedPhotoIndex.value = index;
+  isModalOpen.value = true;
+};
 
-}
+const closeModal = () => {
+  isModalOpen.value = false;
+};
 
 const startDrag = (e) => {
   isDragging = true;
