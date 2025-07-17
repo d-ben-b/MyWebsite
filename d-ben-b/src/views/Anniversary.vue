@@ -3,7 +3,12 @@
     class="container relative flex w-full min-h-screen overflow-x-auto select-none active:cursor-grabbing"
     @mousedown="startDrag" @mousemove="onDrag" @mouseleave="stopDrag" @mouseup="stopDrag">
     <!-- Rope SVG（延伸進來用 dashed 線條） -->
-    <PhotoView :isOpen="isModalOpen" :selectedPhoto="selectedPhoto" @close="closeModal" />
+    <transition name="modal" enter-active-class="transition-opacity duration-500 ease-out "
+      enter-from-class="opacity-0 " enter-to-class="opacity-100 "
+      leave-active-class="transition-opacity duration-200 ease-in " leave-from-class="opacity-100 "
+      leave-to-class="opacity-0">
+      <PhotoView :isOpen="isModalOpen" :selectedPhoto="selectedPhoto" @close="closeModal" />
+    </transition>
     <svg class="absolute top-[15px] left-0 w-[120%] h-8 z-0" viewBox="0 0 600 50" preserveAspectRatio="none">
       <path d="M0,25 C100,5 200,45 300,25 C400,5 500,45 600,25" stroke="#8B5E3C" stroke-width="6" fill="none"
         stroke-linecap="round" stroke-dasharray="6,6" />
@@ -56,7 +61,7 @@ const photos = [
     image: "anniversary/Anping/2-0.jpg",
     date: "2022-09-11",
     title: "Anping",
-    desc: "Anping is a place we visited together, the most memorable part was we go to Anping Tree House, and we took a lot of photos there. we also went to the Anping Port to see TSUM TSUM",
+    desc: "Anping is a place we visited together, the most memorable part was we go to Anping Tree House, and we took a lot of photos there. we also went to the Anping Port to see TSUM TSUM. I am very happy to be with you on this day, and I hope we can go to more places together in the future.",
     image_files: [
       "anniversary/Anping/2-1.jpg",
       "anniversary/Anping/2-2.jpg",
@@ -80,6 +85,13 @@ const photos = [
     image: "anniversary/Chrismas/4-0.jpg",
     date: "2022-12-25",
     title: "Chrismas",
+    desc: "",
+    image_files: [
+      "anniversary/Chrismas/4-1.jpg",
+      "anniversary/Chrismas/4-2.jpg",
+      "anniversary/Chrismas/4-3.jpg",
+      "anniversary/Chrismas/4-4.jpg",
+    ],
   },
   {
     image: "https://picsum.photos/id/115/600/600",
