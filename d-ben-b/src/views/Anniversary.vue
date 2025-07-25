@@ -116,22 +116,36 @@ const photos = [
     ],
   },
   {
-    image: "https://picsum.photos/id/100/600/600",
-    date: "2025-07-12",
-    title: "City Lights",
+    image: "anniversary/Taichang/5-0.jpg",
+    date: "2023-01-29",
+    title: "Taichang Trip",
+    desc: "我們這次去台中玩，我們買了泡芙以及去逛了審計新村，那時候我印象最深刻的就是我們買了一個很可愛的小電鍋，雖然已經找不到他在那裡了，也許這就是叫我們之後再去逛一次(*/ω＼*)，逢甲夜市我也很開心我們吃了很多之前沒有吃過的。",
+    image_files: [
+      "anniversary/Taichang/5-1.jpg",
+      "anniversary/Taichang/5-2.jpg",
+      "anniversary/Taichang/5-3.jpg",
+      "anniversary/Taichang/5-4.jpg",
+    ],
   },
 ];
 
 const photos2 = [
   {
-    image: "https://picsum.photos/id/115/600/600",
-    date: "2025-07-12",
-    title: "City Lights",
+    image: "anniversary/Mango/6-0.jpg",
+    date: "2023-03-24",
+    title: "成大芒果節",
+    desc: "一開始打開相簿的時候還覺得我不會拿個當作紀錄，怕照片太少，不果出乎意料的是我們拍得真的太多張了，而且這的確是需要拿來紀念遺下的，我還記的你在用網子抓芒果的時候可愛的樣子☆*: .｡. o(≧▽≦)o .｡.:*☆。也還記的那時候我們做的芒果青有多好吃，最後做的真的太多了沒有吃完QQ",
+    image_files: [
+      "anniversary/Mango/6-1.jpg",
+      "anniversary/Mango/6-2.jpg",
+      "anniversary/Mango/6-3.jpg",
+      "anniversary/Mango/6-4.jpg",
+    ],
   },
   {
-    image: "https://picsum.photos/id/185/600/600",
-    date: "2025-07-12",
-    title: "City Lights",
+    image: "anniversary/PigBirth/7-0.jpg",
+    date: "2023-04-17",
+    title: "My Piggy's Birthday",
   },
   {
     image: "https://picsum.photos/id/114/600/600",
