@@ -146,6 +146,12 @@ const photos2 = [
     image: "anniversary/PigBirth/7-0.jpg",
     date: "2023-04-17",
     title: "My Piggy's Birthday",
+    desc: "這次生日哩，我想了蠻久該怎麼做才能讓你印想深刻，後來做了一個禮物包，外面我那時候覺得用用紙袋蠻有質感的加上我那時候覺得很可愛的植物大戰殭屍，裡面附上我寫給你的卡片以及解謎卡，還吃了火鍋，跟你在一起真的很幸福(｡♥‿♥｡)。",
+    image_files: [
+      "anniversary/PigBirth/7-1.jpg",
+      "anniversary/PigBirth/7-2.jpg",
+
+    ],
   },
   {
     image: "https://picsum.photos/id/114/600/600",
