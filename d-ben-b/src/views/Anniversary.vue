@@ -31,6 +31,9 @@
           :title="photo2.title" :key="index" @click="openModal(index, 2)" />
       </div>
     </div>
+    <p class="final-message">
+      很高興你夠看到這邊，可能前面想為了配合以前這個網頁的設計有用一些英文，不過後來我覺得除了很多用詞以及地名翻譯起來真的太難了，後來都改用中文了，在這裡我選了最早的十個我覺得我還蠻喜歡而且比較有內容可以寫的相簿來做每個字都是我一個個打出來的包括這整個頁面，(原先是想要準備更多照片的不過排版真的花太多時間了QQ)，我覺得這不會是結束，我希望能夠繼續能夠把這個做完甚至是未來之後的照片我們都能放在這，這次的準備有點像剛開始我對於這個網站一部份的想像，也很高興我真的做出來了，也住我家寶寶有一個開心的紀念日。
+    </p>
   </div>
 
 </template>
@@ -181,6 +184,7 @@ const photos2 = [
     image: "anniversary/Penghu/10-0.jpg",
     date: "2024-07-16",
     title: "Penghu",
+    desc: "我發現我們我真的去了很多地方，澎湖對於我來說是真的跑得很遠，再找照片的時候還看到那時候你出發時搭船的可怕照片，到了當地我們看了奇怪的牡蠣雕像以及吃了牛肉麵以及仙人掌冰，還拍了很多很多照片，這次的旅程我真的很開心，遇到你真的很幸運(｡♥‿♥｡)。",
     image_files: [
       "anniversary/Penghu/10-1.jpg",
       "anniversary/Penghu/10-2.jpg",
@@ -247,5 +251,21 @@ const stopDrag = () => {
 .scroll-container::-webkit-scrollbar {
   display: none;
   /* Chrome, Safari, Opera */
+}
+
+.final-message {
+  max-width: 768px;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #fef9f5;
+  border-left: 6px solid #f59e0b;
+  /* 橘黃色強調 */
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: justify;
+  white-space: pre-line;
 }
 </style>
