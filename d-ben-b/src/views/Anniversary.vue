@@ -154,14 +154,39 @@ const photos2 = [
     ],
   },
   {
-    image: "https://picsum.photos/id/114/600/600",
-    date: "2025-07-12",
-    title: "City Lights",
+    image: "anniversary/FishIsland/8-0.jpg",
+    date: "2023-07-10",
+    title: "Yuguang Island",
+    desc: "你不是常說如果沒有你我不會怎麼樣怎麼樣的，這個的確是，如果沒有遇到妳我的確不會去漁光島，第一真的太遠了，而且漁光島都是情侶如果沒有遇到妳我也不次想去:P，你一直有一個很可愛的習慣都喜歡拍影子，我在這是整理的時候有發現，很好奇為什麼，等你讀到這裡在回答我吧(๑´ڡ`๑)。",
+    image_files: [
+      "anniversary/FishIsland/8-1.jpg",
+      "anniversary/FishIsland/8-2.jpg",
+      "anniversary/FishIsland/8-3.jpg",
+      "anniversary/FishIsland/8-4.jpg",
+    ],
   },
   {
-    image: "https://picsum.photos/id/119/600/600",
-    date: "2025-07-12",
-    title: "City Lights",
+    image: "anniversary/Kaohsiung/9-0.jpg",
+    date: "2024-07-14",
+    title: "Kaohsiung",
+    desc: "我喜歡去高雄，除了那是你熟悉的地方我們可以逛得更加開心之外，我也很想能夠藉由多了解你，我們在這之中吃了很多好吃的野趣很多有名的地方逛，真的想你說的，跟著蘋蘋(ㄅㄨ一 ˊㄅㄨ一 ˊ)吃好喝好ヾ(≧▽≦*)o",
+    image_files: [
+      "anniversary/Kaohsiung/9-1.jpg",
+      "anniversary/Kaohsiung/9-2.jpg",
+      "anniversary/Kaohsiung/9-3.jpg",
+      "anniversary/Kaohsiung/9-4.jpg",
+    ],
+  },
+  {
+    image: "anniversary/Penghu/10-0.jpg",
+    date: "2024-07-16",
+    title: "Penghu",
+    image_files: [
+      "anniversary/Penghu/10-1.jpg",
+      "anniversary/Penghu/10-2.jpg",
+      "anniversary/Penghu/10-3.jpg",
+      "anniversary/Penghu/10-4.jpg",
+    ],
   },
 ]
 
