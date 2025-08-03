@@ -37,7 +37,7 @@ const showSecretPage = ref(false);
 const growFlex = ref(false);
 
 const submitCode = () => {
-  if (secretCode.value === "1") {
+  if (secretCode.value === "3344520") {
     growFlex.value = true;
     showSecretPage.value = true;
   } else {
