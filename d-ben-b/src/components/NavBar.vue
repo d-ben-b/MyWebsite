@@ -10,9 +10,6 @@
       <li>
         <router-link to="/projects" class="mx-2 text-2xl text-text hover-effect">Projects</router-link>
       </li>
-      <li>
-        <router-link to="/contact" class="mx-2 text-2xl text-text hover-effect">Contact</router-link>
-      </li>
       <li class="text-left" :class="{ grow: !growFlex }">
         <router-link to="/journey" class="mx-2 text-2xl text-text hover-effect">Journey</router-link>
       </li>
@@ -21,11 +18,6 @@
           <router-link to="/anniversary" class="mx-2 text-2xl text-text hover-effect">Anniversary</router-link>
         </li>
       </transition>
-      <li>
-        <input v-model="secretCode" @keyup.enter="submitCode" type="text"
-          placeholder="This is a place for some secret code"
-          class="h-8 px-5 border-2 border-text w-96 rounded-xl focus:outline-none" />
-      </li>
     </ul>
   </nav>
 </template>
